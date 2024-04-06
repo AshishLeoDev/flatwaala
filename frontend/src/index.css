@@ -1,3 +1,7 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,10 +13,6 @@ body,
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -99,4 +99,8 @@ body,
   to {
     opacity: 0;
   }
+}
+
+.addProperty {
+  text-shadow: 0.2px 2px 6px black;
 }
