@@ -1,6 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { lazy } from "react";
 import { Suspense } from "react";
+import Loading from "./templates/loaders/Loading";
 
 function App() {
   const HomeScreen = lazy(() => import("./Pages/HomePage/HomeScreen"));
@@ -10,11 +11,12 @@ function App() {
   const Navbar = lazy(() => import("./templates/headers/Navbar"));
   return (
     <Router>
-      <Suspense fallback={() => {}}>
+      <Suspense fallback={<Loading />}>
         <HeaderTopSlider />
-        <nav>
+        <nav className="bg-black text-white">
           <Navbar />
         </nav>
+
         <main>
           <Routes>
             <Route path="/" element={<HomeScreen />} />
